@@ -1,5 +1,3 @@
-#include "calculator.h"
-
-float Addfunc(float a, float b){
+double Addfunc(double a, double b){
 	return a+b;
-} 
+}

@@ -1,5 +1,3 @@
-#include "calculator.h"
-
-float Dividefunc(float a, float b){
+double Dividefunc(double a, double b){
 	return a/b;
 }

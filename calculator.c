@@ -2,27 +2,33 @@
 #include <stdlib.h>
 #include "calculator.h"
 
-int main(int argc, char *argv[]){
-    float a;
-    float b;
-    int op;
-    float result = 0;
+enum{Add=1, Minus, Multi, Divide};
 
-    a = atof(argv[1]);
-    b = atof(argv[2]);
-    op = atoi(argv[3]);
-
-    if (op == 1){
-	result = Addfunc(a,b);
-    } else if (op == 2){
-	result = Minusfunc(a,b);
-    } else if (op == 3){
-	result = Multifunc(a,b);
-    } else{
-	result =Dividefunc(a,b);
+int main(int argc, char** argv) {
+	double val1, val2;
+	int select;
+	double result;
+	val1 = atof(argv[1]);
+	val2 = atof(argv[2]);
+	select = atoi(argv[3]);
+	switch(select) {
+		case Add:
+			result = Addfunc(val1, val2);
+			break;
+		case Minus:
+			result = Minusfunc(val1, val2);
+			break;
+		case Multi:
+			result = Multifunc(val1, val2);
+			break;
+		case Divide:
+			result = Dividefunc(val1, val2);
+			break;
+		default:
+			printf("Repeat the other value");
+			break;
 	}
-
-    printf("Result value: %.6f\n", result);
-    return 0;
-
+	printf("Result value: %lf\n", result);
 }
+
+

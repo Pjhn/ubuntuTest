@@ -1,5 +1,3 @@
-#include "calculator.h"
-
-float Multifunc(float a, float b){
+double Multifunc(double a, double b){
 	return a*b;
 }

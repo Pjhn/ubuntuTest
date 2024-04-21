@@ -1,5 +1,3 @@
-#include "calculator.h"
-
-float Minusfunc(float a, float b){
+double Minusfunc(double a, double b){
 	return a-b;
 }
